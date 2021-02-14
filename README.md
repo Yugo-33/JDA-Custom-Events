@@ -19,3 +19,5 @@ public class Main extends CustomListeners {
 	}
 }
 ```
+
+If you have an error in the `CustomListeners.java` and the `GuildMemberJoinByInvitEvent.java` just replace the `Main` by your principal class and refresh the import.
