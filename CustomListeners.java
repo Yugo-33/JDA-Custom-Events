@@ -690,16 +690,16 @@ public abstract class CustomListeners implements EventListener
         //Guild Invite Events
         else if (event instanceof GuildInviteCreateEvent) {
             onGuildInviteCreate((GuildInviteCreateEvent) event);
-            Main.invites.put(((GuildJoinEvent) event).getGuild(), ((GuildJoinEvent) event).getGuild().retrieveInvites().complete());
+            Main.invites.put(((GuildInviteCreateEvent) event).getGuild(), ((GuildInviteCreateEvent) event).getGuild().retrieveInvites().complete());
         } else if (event instanceof GuildInviteDeleteEvent) {
             onGuildInviteDelete((GuildInviteDeleteEvent) event);
-            Main.invites.put(((GuildJoinEvent) event).getGuild(), ((GuildJoinEvent) event).getGuild().retrieveInvites().complete());
+            Main.invites.put(((GuildInviteDeleteEvent) event).getGuild(), ((GuildInviteDeleteEvent) event).getGuild().retrieveInvites().complete());
         }
         
         //Guild Member Events
         else if (event instanceof GuildMemberJoinEvent) {
             onGuildMemberJoin((GuildMemberJoinEvent) event);
-        	onGuildMemberJoinByInvit(new GuildMemberJoinByInvitEvent(event.getJDA(), event.getResponseNumber(), ((GuildMemberJoinEvent) event).getMember()));
+        	onGuildMemberJoinByInvite(new GuildMemberJoinByInviteEvent(event.getJDA(), event.getResponseNumber(), ((GuildMemberJoinEvent) event).getMember()));
         } else if (event instanceof GuildMemberLeaveEvent)
             onGuildMemberLeave((GuildMemberLeaveEvent) event);
         else if (event instanceof GuildMemberRoleAddEvent)
