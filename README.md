@@ -14,9 +14,9 @@ public class Main extends CustomListeners {
   }
   
   @Override
-	public void onGuildMemberJoinByInvit(GuildMemberJoinByInvitEvent event) {
-		System.out.println(event.getInvite().getCode());
-	}
+  public void onGuildMemberJoinByInvit(GuildMemberJoinByInvitEvent event) {
+    System.out.println(event.getInvite().getCode());
+  }
 }
 ```
 
