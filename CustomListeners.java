@@ -3,6 +3,7 @@ package fr.yugo.discord.libs;
 import javax.annotation.Nonnull;
 
 import fr.yugo.discord.Main;
+import fr.yugo.discord.events.GuildMemberJoinByInvitEvent;
 import net.dv8tion.jda.annotations.DeprecatedSince;
 import net.dv8tion.jda.annotations.ForRemoval;
 import net.dv8tion.jda.annotations.ReplaceWith;
